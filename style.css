@@ -1,0 +1,268 @@
+/* Estilos globais e reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que o body ocupe toda a altura da viewport */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal desnecessária */
+}
+
+/* Fundo com imagem e desfoque, e animação de gradiente */
+body {
+    background-image: url('imagens/fundo1.png'); /* Substitua pelo caminho correto da sua imagem desfocada se não for a mesma */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; /* A imagem de fundo permanece fixa ao rolar */
+}
+
+
+/* Estilo para o cabeçalho */
+header {
+ /* Fundo semi-transparente para o cabeçalho */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky; /* Faz o cabeçalho grudar no topo ao rolar */
+    top: 0;    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Estilo para a navegação (lista de abas) */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza os itens da navegação */
+}
+
+nav ul li {
+    display: inline-block; /* Faz os itens da lista ficarem lado a lado */
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #fff; /* Cor do texto dos links */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo ao passar o mouse */
+    color: #ffd700; /* Cor do texto dourado ao passar o mouse */
+}
+
+nav ul li a.active { /* Estilo para a aba ativa */
+    background-color: #007bff; /* Exemplo de azul mais vibrante para a aba ativa */
+    color: #fff;
+    pointer-events: none; /* Desabilita clique na própria página ativa */
+}
+
+
+/* Estilo para o conteúdo principal */
+main {
+    max-width: 800px; /* Largura máxima do conteúdo */
+    margin: 50px auto; /* Centraliza o conteúdo e adiciona margem superior/inferior */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente para o conteúdo */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center; /* Centraliza o texto dentro do main */
+}
+
+main h1 {
+    color: #0056b3; /* Cor do título principal */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para o rodapé */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Pode ser 'fixed' se quiser que ele esteja sempre na parte inferior da tela */
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px; /* Espaçamento do conteúdo acima */
+}
+
+/* Estilos Responsivos Básicos */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    main {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block; /* Empilha os itens da navegação em telas pequenas */
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        display: block; /* Faz o link preencher a largura do item da lista */
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+}
+.slider {
+    width: 800px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    border-radius: 10px;
+    overflow: hidden; /* Hides parts of images that are not current */
+    margin: 50px auto; /* Centers the slider and adds vertical margin */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.slides {
+    width: 400%; /* 100% per slide * 4 slides = 400% */
+    height: 100%;
+    display: flex; /* Arranges slides in a row */
+}
+
+.slides input {
+    display: none; /* Hides the actual radio buttons */
+}
+
+.slide {
+    width: 25%; /* Each slide takes up 25% of the .slides container */
+    position: relative;
+    transition: 0.6s; /* Smooth transition when slides change */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+/* Navigation Auto (for the automatic dots) */
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px; /* Positions dots over the image slightly */
+    display: flex;
+    justify-content: center;
+    bottom: 0; /* Align to the bottom of the slides container */
+}
+
+.navigation-auto div {
+    border: 2px solid #20a0ff; /* Border for the auto dots */
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 20px; /* Space between auto dots */
+}
+
+/* Navigation Manual (for clickable dots below images) */
+.manual-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Space between images and manual dots */
+}
+
+.manual-btn {
+    border: 2px solid #007bff; /* Border for manual dots */
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.6s;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 20px; /* Space between manual dots */
+}
+
+.manual-btn:hover {
+    background-color: #0056b3; /* Hover effect for manual dots */
+    border-color: #0056b3;
+}
+
+/* CSS for when radio buttons are checked */
+#radio1:checked ~ .first { margin-left: 0; }
+#radio2:checked ~ .first { margin-left: -25%; }
+#radio3:checked ~ .first { margin-left: -50%; }
+#radio4:checked ~ .first { margin-left: -75%; }
+
+/* Styling for active dots (both auto and manual) */
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #20a0ff; /* Active color for auto dots */
+}
+
+#radio1:checked ~ .manual-navigation .manual-btn:nth-child(1),
+#radio2:checked ~ .manual-navigation .manual-btn:nth-child(2),
+#radio3:checked ~ .manual-navigation .manual-btn:nth-child(3),
+#radio4:checked ~ .manual-navigation .manual-btn:nth-child(4) {
+    background-color: #007bff; /* Active color for manual dots */
+}
+
+/* Responsive adjustments for the slider */
+@media (max-width: 800px) {
+    .slider {
+        width: 95%; /* Make slider more responsive */
+        height: auto;
+        margin: 30px auto;
+    }
+
+    .slide img {
+        height: auto; /* Allow image height to adjust */
+    }
+
+    .navigation-auto {
+        margin-top: -30px; /* Adjust dot position */
+    }
+
+    .navigation-auto div, .manual-btn {
+        padding: 6px;
+        margin-right: 10px; /* Smaller spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 250px; /* Even smaller height for very small screens */
+    }
+    .navigation-auto, .manual-navigation {
+        margin-top: 15px; /* Adjust dot position for small screens */
+    }
+    .navigation-auto div, .manual-btn {
+        padding: 5px;
+    }
+}

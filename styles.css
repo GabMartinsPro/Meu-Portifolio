@@ -1,0 +1,90 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align:center; 
+    background-image: url('imagens/fundos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+}
+header {
+ /* Fundo semi-transparente para o cabeçalho */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky; /* Faz o cabeçalho grudar no topo ao rolar */
+    top: 0;    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza as abas */
+}
+
+nav ul li {
+    display: inline-block; /* Faz com que as abas fiquem lado a lado */
+    margin: 0 15px; /* Espaçamento entre as abas */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Cor do texto das abas */
+    padding: 8px 15px;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+nav ul li a:hover,
+nav ul li a.active { /* Estilo ao passar o mouse ou para a aba ativa */
+    background-color: #555;
+    color: #ffd700; /* Dourado, para contraste */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #c26ceb;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Fixa o rodapé na parte inferior */
+    bottom: 0;
+    width: 100%;
+}nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza os itens da navegação */
+}
+
+nav ul li {
+    display: inline-block; /* Faz os itens da lista ficarem lado a lado */
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #fff; /* Cor do texto dos links */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo ao passar o mouse */
+    color: #ffd700; /* Cor do texto dourado ao passar o mouse */
+}
+
+nav ul li a.active { /* Estilo para a aba ativa */
+    background-color: #007bff; /* Exemplo de azul mais vibrante para a aba ativa */
+    color: #fff;
+    pointer-events: none; /* Desabilita clique na própria página ativa */
+}
