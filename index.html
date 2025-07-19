@@ -1,64 +1,56 @@
 <!DOCTYPE html>
-<html lang="Pt-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>Página Inicial - Meu Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="sobre.html">Sobre Mim</a></li>
-                <li><a href="downloads.html">Downloads</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Meu Site</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="downloads.html">Downloads</a></li>
+                    <li><a href="sobre.html">Sobre Mim</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
     <main>
-        <h1>Bem vindo a minha pagina.</h1>
-        <p>esta pagina reflete em um projeto que estou criando e aprimorando para por em prática tudo oque aprendo.</p>
-
-        <div class="slider">
-            <div class="slides">
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-
-                <div class="slide first">
-                    <img src="imagens/imagem 1.jpg" alt="Slide Image 1">
-                </div>
-                <div class="slide">
-                    <img src="imagens/imagem2.jpg" alt="Slide Image 2">
-                </div>
-                <div class="slide">
-                    <img src="imagens/img3.jpg" alt="Slide Image 3">
-                </div>
-                <div class="slide">
-                    <img src="imagens/img4.jpg" alt="Slide Image 4">
-                </div>
-
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
+        <section class="hero">
+            <div class="container">
+                <h1>Bem-vindo ao Meu Site!</h1>
+                <p>Aqui pretendo colocar em prática tudo oque estou estudando em HTML, CSS, javascript e afins. Vou listar nesta primeira página tudo oque tiver de novo como atualizações.</p>
             </div>
+        </section>
 
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
+        <section class="slider-container">
+            <div class="slider">
+                <img src="imagens/imagem 1.png" alt="Imagem 1">
+                <img src="imagens/imagem 2.png" alt="Imagem 2">
+                <img src="imagens/img3.png" alt="Imagem 3">
+                <img src="imagens/img4.png" alt="Imagem 4">
             </div>
-        </div>
+            <button class="prev-slide">❮</button>
+            <button class="next-slide">❯</button>
+        </section>
 
+        <section class="content">
+            <div class="container">
+                <h2>O que você encontrará por aqui:</h2>
+                <p>Navegue pelas nossas seções para descobrir mais. A área de downloads está repleta de recursos úteis!</p>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 Site por Biel</p>
+        <div class="container">
+            <p>&copy; 2025 Meu portifolio by Biel</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

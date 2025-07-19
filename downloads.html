@@ -1,21 +1,57 @@
 <!DOCTYPE html>
-<html lang="Pt-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Downloads</title>
-    <link rel="stylesheet" href="styled.css">
+    <title>Downloads - Meu Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-            <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="sobre.html">Sobre Mim</a></li>
-                <li><a href="downloads.html">Downloads</a></li>
-            </ul>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Meu Site</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="downloads.html">Downloads</a></li>
+                    <li><a href="sobre.html">Sobre Mim</a></li>
+                </ul>
+            </div>
         </nav>
-    <header>DOWNLOADS</header>
-    <h1>Pagina de downloads futuros de updates e/ou projetos paralelos que eu for atualizando.</h1>
-    <footer>&copy; 2025 por Biel</footer>
+    </header>
+
+    <main>
+        <section class="downloads-section">
+            <div class="container">
+                <h1>Área de Downloads</h1>
+                <p>Aqui você pode baixar diversos arquivos úteis.</p>
+
+                <div class="download-item">
+                    <h3>Documento Importante 1</h3>
+                    <p>Descrição breve do documento 1.</p>
+                    <a href="caminho/para/documento1.pdf" download>Baixar PDF</a>
+                </div>
+
+                <div class="download-item">
+                    <h3>Software Útil V1.0</h3>
+                    <p>Um programa que pode te ajudar em suas tarefas.</p>
+                    <a href="caminho/para/software.zip" download>Baixar ZIP</a>
+                </div>
+
+                <div class="download-item">
+                    <h3>Planilha de Orçamento</h3>
+                    <p>Modelo de planilha para controle financeiro.</p>
+                    <a href="caminho/para/planilha.xlsx" download>Baixar XLSX</a>
+                </div>
+
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>

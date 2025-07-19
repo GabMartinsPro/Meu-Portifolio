@@ -1,29 +1,40 @@
-// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slider img');
+    const prevBtn = document.querySelector('.prev-slide');
+    const nextBtn = document.querySelector('.next-slide');
 
-let counter = 1;
+    let currentIndex = 0;
+    const totalSlides = slides.length;
 
-// Initialize the first radio button as checked
-document.getElementById('radio1').checked = true;
-
-setInterval(function() {
-    nextImage();
-}, 2000); // Change image every 2 seconds (2000 milliseconds)
-
-function nextImage() {
-    counter++;
-    if (counter > 4) { // If it goes past the last image (4), reset to 1
-        counter = 1;
+    // Função para mostrar o slide atual
+    function showSlide(index) {
+        if (index >= totalSlides) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = totalSlides - 1;
+        } else {
+            currentIndex = index;
+        }
+        const offset = -currentIndex * 100;
+        slider.style.transform = `translateX(${offset}%)`;
     }
-    document.getElementById('radio' + counter).checked = true; // Check the next radio button
-}
 
-// Optional: Add event listeners for manual navigation buttons (dots)
-// This makes sure the auto-play continues correctly after a manual click
-const manualBtns = document.querySelectorAll('.manual-btn');
-manualBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        counter = index + 1; // Update counter based on clicked button
-        // The radio button is already checked by the HTML 'for' attribute,
-        // but updating the counter helps the auto-play function correctly from this point.
+    // Botão Anterior
+    prevBtn.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
     });
+
+    // Botão Próximo
+    nextBtn.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    // Inicializa o slider
+    showSlide(currentIndex);
+
+    // Opcional: Auto-play do slider
+setInterval(() => {
+    showSlide(currentIndex + 1);
+}, 5000);
 });
