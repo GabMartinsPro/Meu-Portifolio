@@ -1,58 +1,148 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial - Meu Site</title>
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--fim google fonts-->
+    <!--bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--bootstrap icons fim-->
     <link rel="stylesheet" href="style.css">
+    <title>Martins Conecta</title>
+
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="index.html" class="logo">Meu Site</a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="downloads.html">Downloads</a></li>
-                    <li><a href="sobre.html">Sobre Mim</a></li>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="imagens/logo.png" alt="logo Martins conecta">
+                </a>
+            </div><!--logotipo-->
+            <nav class="menu desktop">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Especialidades</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Projetos</a></li>
                 </ul>
+            </nav>
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
             </div>
-        </nav>
+
+        </div><!--Interface-->
     </header>
-
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Bem-vindo ao Meu Site!</h1>
-                <p>Aqui pretendo colocar em prática tudo oque estou estudando em HTML, CSS, javascript e afins. Vou listar nesta primeira página tudo oque tiver de novo como atualizações.</p>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>
+                            Transformando Ideias em realidade <span>.</span>
+                        </h1>
+                        <p>
+                            Neste site pretendo colocar minhas habilidades com web design conforme aprendo, no intuito de ensinar mais pessoas.</p>
+                            <div class="btn-contato">
+                                <a href="#"><button>Entre em Contato</button></a>
+                            </div>
+
+                    </div><!--txt topo site-->
+                    <div class="img-topo-site">
+                        <img src="imagens/glow.png" alt="img-flutuante">
+
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+
+
+            </div><!--Interface-->
+        
+ </section><!--topo-do-site-->
+ <section class="especialidades">
+    <div class="interface">
+        <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+        <div class="flex">
+            <div class="especialidades-box">
+                <i class="bi bi-file-earmark-code"></i>
+                <h3>WEBSITE</h3>
+                <p>Crio website por diversão por enquanto, mas pretendo trabalhar com isso futuramente</p>
+
+
+            </div><!--especialidades-box-->
+            <div class="especialidades-box">
+                <i class="bi bi-github"></i>
+                <h3>GITHUB</h3>
+                <p>Meu repositório no Github</p>
+
+
+            </div><!--especialidades-box-->
+            <div class="especialidades-box">
+                <i class="bi bi-motherboard"></i>
+                <h3>HARDWARE</h3>
+                <p>Tenho conhecimento na area de hardware de computação e realizo limpeza de hardware, sistema, Formatação e backup de arquivos do windows.</p>
+
+
+            </div><!--especialidades-box-->
+
+        </div><!--FLEX-->
+    </div><!--interface-->
+ </section><!--especialidades-->
+ <section class="sobre">
+    <div class="interface">
+        <div class="flex">
+            <div class="img-sobre">
+                <img src="imagens/foto.png" alt="">
             </div>
-        </section>
+            <div class="txt-sobre">
+                <h2>Muito prazer, <span>SOU GABRIEL MARTINS.</span></h2>
+                <p>Sou Gabriel, natural de Recife-PE, estudante do curso técnico em Desenvolvimento de Sistemas. Desenvolvi este site com o intuito de colocar em prática os conhecimentos adquiridos até o momento, além de utilizá-lo como portfólio pessoal.</p>
+                <p>Sou iniciante em DSI e este projeto representa o primeiro passo de uma trajetória que pretendo construir com dedicação, aprendizado contínuo e paixão por tecnologia.</p>
+                <div class="btn-social">
+                    <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                    <a href="#"><button><i class="bi bi-facebook"></i></button></a>
+                    <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                </div><!--btn-social-->
+            </div><!--txt-sobre-->
 
-        <section class="slider-container">
-            <div class="slider">
-                <img src="imagens/imagem 1.png" alt="Imagem 1">
-                <img src="imagens/imagem 2.png" alt="Imagem 2">
-                <img src="imagens/img3.png" alt="Imagem 3">
-                <img src="imagens/img4.png" alt="Imagem 4">
+        </div><!--flex-->
+
+    </div><!--interface-->
+
+
+
+ </section><!--sobre-->
+ <section class="portifolio">
+    <div class="interface">
+        <h2 class="titulo">MEU <span>PORTIFÓLIO</span></h2>
+        <div class="flex">
+            <div class="img-port" style="background-image:url(imagens/design.png);">
+                <div class="overlay">Impacto da Tecnologia</div>
             </div>
-            <button class="prev-slide">❮</button>
-            <button class="next-slide">❯</button>
-        </section>
-
-        <section class="content">
-            <div class="container">
-                <h2>O que você encontrará por aqui:</h2>
-                <p>Navegue pelas nossas seções para descobrir mais. A área de downloads está repleta de recursos úteis!</p>
+            <div class="img-port" style="background-image:url(imagens/design.png);">
+                <div class="overlay">Projeto 02</div>
             </div>
-        </section>
-    </main>
+            <div class="img-port" style="background-image:url(imagens/design.png);">
+                <div class="overlay">Projeto 03</div>
+            </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Meu portifolio by Biel</p>
-        </div>
-    </footer>
+        </div><!--flex-->
 
-    <script src="script.js"></script>
+    </div><!--interface-->
+ </section><!--portifolio-->
+
+
+ </section>
+
+
+
+
+</main>
+    
 </body>
 </html>
