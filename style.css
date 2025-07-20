@@ -34,7 +34,7 @@ h2.titulo{
 h2.titulo span{
     color: #c8ff00;
 }
-button:hover{
+button:hover,form .btn-enviar input:hover{
     box-shadow: 0px 0px 8px #cfe60159;
     transform: scale(1.05);
 }
@@ -157,7 +157,7 @@ section.sobre .flex{
     margin: 20px 0;
     text-align: justify;
 }
-.sobre .txt-sobre .btn-social button{
+.btn-social button{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -209,4 +209,85 @@ section.portifolio .flex{
 }
 .overlay:hover{
     opacity: 1;
+}
+/* Formulário*/
+section.form{
+    padding: 80px 4%;
+}
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+form input, form textarea{
+    width: 100%;
+    background-color: #3f3f3f9c;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #aad805f6;
+    font-size: 18px;
+}
+form input::placeholder{
+    color: #d7e607;
+}
+form textarea{
+    resize: none;
+}
+form .btn-enviar{
+    margin-top: 25px;
+    text-align: center;
+    
+}
+form .btn-enviar input{
+    width: 120px;
+    background-color: #c8ff00;
+    color: #000;
+    font-weight: 650;
+    cursor: pointer;
+    transition: .2s;
+
+}
+/* estilo do rodapé */
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 40px #c8ff0067;
+
+}
+footer .flex{
+    justify-content: space-between;
+
+}
+footer .line-footer{
+    padding: 20px 0px;
+}
+.borda{
+    border-top: 2px solid #c8ff00;
+}
+footer .line-footer p i{
+    color: #e5f501;
+    font-size: 25px;
+}
+footer .line-footer p a{
+    color: #c8ff00;
+}
+.texto-redes{
+    margin-top: 15px;
+    color: #c8ff00;
+}
+@media screen and (max-width: 1040px){
+    /* classes gerais */
+    .flex{
+        flex-direction: column;
+    }
+    /* cabeçalho */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
 }
