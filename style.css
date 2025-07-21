@@ -35,7 +35,7 @@ h2.titulo span{
     color: #c8ff00;
 }
 button:hover,form .btn-enviar input:hover{
-    box-shadow: 0px 0px 8px #cfe60159;
+    box-shadow: 0px 0px 8px #d5ec02bb;
     transform: scale(1.05);
 }
 /* Estilo do Cabeçalho*/
@@ -49,7 +49,7 @@ header > .interface{
 }
 
 header a{
-    color: rgb(97, 97, 97);
+    color: rgba(119, 119, 119, 0.671);
     text-decoration: none;
     display: inline-block;
 
@@ -62,12 +62,11 @@ header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
 }
-header a.menu-desktop:hover{
-    color: #fff;
+header nav.menu-desktop ul li a:hover {
+    color: #e8f7a5;
     transform: scale(1.05);
-    transition: .2s;
-
 }
+
 /* estilo do menu mobile */
 .btn-abrir-menu i{
     color:#d7e607;
